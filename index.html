@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tree</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .family-tree {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        .generation {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+        .generation a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .generation a:hover {
+            text-decoration: underline;
+        }
+        .description {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Family Tree for [Person's Name]</h1>
+
+    <div class="family-tree">
+        <!-- Grandparents -->
+        <div class="generation">
+            <a href="grandfather.html">Grandfather</a>
+            <a href="grandmother.html">Grandmother</a>
+        </div>
+
+        <!-- Parents -->
+        <div class="generation">
+            <a href="father.html">Father</a>
+            <a href="mother.html">Mother</a>
+        </div>
+
+        <!-- Person -->
+        <div class="generation">
+            <strong>[Person's Name]</strong>
+        </div>
+
+        <!-- Children -->
+        <div class="generation">
+            <a href="child1.html">Child 1</a>
+            <a href="child2.html">Child 2</a>
+        </div>
+
+        <!-- Grandchildren -->
+        <div class="generation">
+            <a href="grandchild1.html">Grandchild 1</a>
+            <a href="grandchild2.html">Grandchild 2</a>
+        </div>
+    </div>
+
+    <div class="description">
+        <h2>About [Person's Name]</h2>
+        <p>
+            [Here you can write a short description about this person, their life, achievements, or anything you want to highlight.]
+        </p>
+    </div>
+
+</body>
+</html>
