@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Tree</title>
+    <title>Family Tree for [Person's Name]</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,26 +15,59 @@
             text-align: center;
             color: #333;
         }
-        .family-tree {
+        .tree-container {
             display: flex;
             justify-content: center;
-            align-items: center;
             flex-direction: column;
-            margin: 20px 0;
+            align-items: center;
         }
         .generation {
             display: flex;
-            justify-content: space-around;
-            margin: 10px 0;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
         }
-        .generation a {
+        .side {
+            margin: 0 20px;
+            text-align: center;
+        }
+        .side h3 {
+            margin-bottom: 10px;
+        }
+        .side a {
             text-decoration: none;
             color: #0056b3;
             font-weight: bold;
-            margin: 0 10px;
         }
-        .generation a:hover {
+        .side a:hover {
             text-decoration: underline;
+        }
+        .person {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 10px;
+        }
+        .vertical-line {
+            border-left: 2px solid #333;
+            height: 30px;
+            margin: 10px auto;
+        }
+        .horizontal-line {
+            border-top: 2px solid #333;
+            width: 80%;
+            margin: 10px auto;
+        }
+        .child-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .grandchild-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
         }
         .description {
             max-width: 600px;
@@ -50,34 +83,56 @@
 
     <h1>Family Tree for [Person's Name]</h1>
 
-    <div class="family-tree">
+    <div class="tree-container">
         <!-- Grandparents -->
         <div class="generation">
-            <a href="grandfather.html">Grandfather</a>
-            <a href="grandmother.html">Grandmother</a>
+            <!-- Paternal Side -->
+            <div class="side">
+                <h3>Paternal Grandparents</h3>
+                <a href="paternal_grandfather.html">Paternal Grandfather</a><br>
+                <a href="paternal_grandmother.html">Paternal Grandmother</a>
+            </div>
+
+            <!-- Divider -->
+            <div class="vertical-line"></div>
+
+            <!-- Maternal Side -->
+            <div class="side">
+                <h3>Maternal Grandparents</h3>
+                <a href="maternal_grandfather.html">Maternal Grandfather</a><br>
+                <a href="maternal_grandmother.html">Maternal Grandmother</a>
+            </div>
         </div>
 
         <!-- Parents -->
         <div class="generation">
-            <a href="father.html">Father</a>
-            <a href="mother.html">Mother</a>
+            <div class="side">
+                <a href="father.html">Father</a>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="side">
+                <a href="mother.html">Mother</a>
+            </div>
         </div>
 
         <!-- Person -->
-        <div class="generation">
-            <strong>[Person's Name]</strong>
+        <div class="person">
+            [Person's Name]
         </div>
 
         <!-- Children -->
-        <div class="generation">
+        <div class="horizontal-line"></div>
+        <div class="child-section">
             <a href="child1.html">Child 1</a>
             <a href="child2.html">Child 2</a>
+            <!-- Add more children links as needed -->
         </div>
 
         <!-- Grandchildren -->
-        <div class="generation">
+        <div class="grandchild-section">
             <a href="grandchild1.html">Grandchild 1</a>
             <a href="grandchild2.html">Grandchild 2</a>
+            <!-- Add more grandchildren links as needed -->
         </div>
     </div>
 
